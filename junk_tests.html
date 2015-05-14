@@ -1,0 +1,32 @@
+<html>
+<script>
+
+/*var empty = [];
+console.log(typeof empty);*/
+// Result: 'object'
+
+/*var empty = new Array(10);
+console.log(empty.length);
+console.log(empty);*/
+// Result: 10 empty slots in array
+
+/*console.log(Array(5));
+console.log(Array(5).join("test"));*/
+
+ function Person(firstname, lastname)
+ {
+   var fullName = firstname + " " + lastname;
+
+   this.getFirstName = function () { return firstname; };
+   this.getLastName = function () { return lastname; };
+   this.getFullName = function () { return fullName; };
+ }
+console.log(new Person("John","Smith"));
+// NOTE: when you look at the object, we do NOT see a firstname or lastname property. Weird.
+// But if we did this.firstname = firstname; then we WOULD.
+// Yet the getFirstName() function still works!
+// Ordinary vars and parameters to the constructor are PRIVATE
+
+
+</script>
+</html>
